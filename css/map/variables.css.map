@@ -1,0 +1,1 @@
+{"version":3,"sources":["variables.scss"],"names":[],"mappings":"AAAA,K,CACI,0B,CACA,qB,CACA,qB,CACA,qB,CAEA,oB,CAEA,uB","file":"../variables.css","sourcesContent":[":root {\r\n    --font-size-initial:  12px;\r\n    --font-size-lv2: 14px;\r\n    --font-size-lv3: 16px;\r\n    --font-size-lv4: 18px;\r\n\r\n    --spacing-site: 2rem;\r\n\r\n    --color-text-main: #000;\r\n}"]}

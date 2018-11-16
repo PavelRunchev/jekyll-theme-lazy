@@ -1,7 +1,7 @@
 
 .navigation {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     align-items: center;
     justify-content: center;
@@ -13,17 +13,32 @@
     margin: 0;
 }
 
-.navigation ul li {
+.navigation li {
     display: block;
-    padding: 0.5em 0;
+    padding: 1em 0;
+    list-style: none outside;
+    opacity: 0;
+    animation: navitemin 0.5s 1 ease forwards;
+    transform: scale(0.1) translate(0, 3rem) rotate(720deg);
 }
 
 .navigation a {
-    padding: 1em 2em;
+    padding: 1.5em 2.5em;
     display: block;
+    font-size: 1.5em;
+    text-decoration: none;
+    background: #fff;
     color: #444;
-    box-shadow: 0 0 1.5rem 0 rgba(0,0,0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1.5rem 0 rgba(0,0,0, 0.3);
 }
+
+.navigation li:nth-child(1) { animation-delay: 0.15s; }
+.navigation li:nth-child(2) { animation-delay: 0.30s; }
+.navigation li:nth-child(3) { animation-delay: 0.45s; }
+.navigation li:nth-child(4) { animation-delay: 0.60s; }
+.navigation li:nth-child(5) { animation-delay: 0.75s; }
+.navigation li:nth-child(6) { animation-delay: 0.90s; }
 
 .navigation a:before {
     margin-right: 1em;
@@ -35,11 +50,17 @@
 
 .nav-toggle {
     position: fixed;
-    top: var(--spacing-site, 2em);
-    left: var(--spacing-site, 2em);
+    top: var(--spacing-site, 2rem);
+    left: var(--spacing-site, 2rem);
     z-index: 1000;
-    font-size: 2em;
+    font-size: 2rem;
     padding: 0 0.5rem;
+    animation: navtogglein 0.5s 1 ease-in-out forwards;
+}
+
+#nav-toggle-right {
+	left: inherit;
+	right: var(--spacing-site, 2rem);
 }
 
 .nav-toggle span {
@@ -57,12 +78,22 @@
     content: '\f0c9';
 }
 
+.nav-toggle:before {
+	margin-right: 1rem;
+}
 
 #nav-main-toggle:checked + .site-header .navigation {
     display: flex;
+    z-index: 1000;
 }
 
 #nav-main-toggle:checked + .site-header .nav-toggle:before {
     /* unicode to icon awesome equivalent -> "fas fa-times"*/
     content: '\f00d';
+
+}
+
+#nav-main-toggle:checked + .site-header .nav-toggle {
+    z-index: 1010;
+	animation: jump 0.1s 1 ease-in-out forwards;
 }

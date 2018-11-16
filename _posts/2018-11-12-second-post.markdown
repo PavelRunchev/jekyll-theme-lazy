@@ -1,5 +1,6 @@
 ---
 layout: site
+type: post
 title:  "Second Post for thesting the theme"
 date:   2018-11-12 18:23:38 +0200
 ---

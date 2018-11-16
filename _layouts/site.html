@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ site.title }}</title>
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/styles.css">
 </head>
-<body>
+<body class="{% if page.type %}{{page.type}} {% endif %}{% if page.title %}{{ page.title | slugify }}{% else %}home{% endif %}">
     <div class="site">
 
         <input type="checkbox" id="nav-main-toggle" name="nav-main-toggle">
@@ -21,9 +21,10 @@
             <label class="fas nav-toggle right" id="nav-toggle-right" for="nav-main-toggle"><span> Menu</span></label>
             <nav class="navigation main">
                 <ul>
-                    <li><a class="fas fa-newspaper" href="/"> Blog</a></li>
-                    <li><a class="fas fa-user-secret" href="/about/"> About</a></li>
-                    <li><a class="fas fa-envelope" href="/contacts/"> Contacts</a></li>
+                    <li><a class="fas fa-newspaper" href="{{ site.baseurl }}/"> Blog</a></li>
+                    <li><a class="fas fa-user-secret" href="{{ site.baseurl }}/about/"> About</a></li>
+                    <li><a class="fas fa-envelope" href="{{ site.baseurl }}/contacts/"> Contacts</a></li>
+                    <li><a class="fas fa-lock" href="{{ site.baseurl }}/login/"> Login</a></li>
                 </ul>
             </nav>
         </header>
@@ -31,7 +32,7 @@
                 {{ content }}
         </main>
         <footer class="site-footer">
-
+            <p>&copy; 2018 Jekyll</p>
         </footer>
     </div>
 

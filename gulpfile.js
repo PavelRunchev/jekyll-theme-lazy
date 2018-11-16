@@ -28,7 +28,7 @@ gulp.task('scss', function () {
 });
 
 gulp.task('jekyll', function () {
-    require('child_process').exec('jekyll build --baseurl=', {stdio: 'inherit'}, function() {
+    require('child_process').exec('bundle exec jekyll build --baseurl=', {stdio: 'inherit'}, function() {
         browserSync.reload();
     });
 });

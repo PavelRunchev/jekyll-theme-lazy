@@ -1,0 +1,20 @@
+@import '../fontawesome/css/all.css';
+
+@import 'variables.scss';
+@import 'reset.scss';
+@import 'typography.scss';
+@import 'animations.scss';
+@import 'forms.scss';
+
+@import 'layout.scss';
+@import 'navigation.scss';
+@import 'listing.scss';
+
+@import 'site-header.scss';
+@import 'site-footer.scss';
+
+body {
+    background: #EEE;
+    color: #000;
+    display: block;
+}

@@ -1,0 +1,57 @@
+.listing {
+	padding: 0;
+	margin: 0;
+	display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.listing li {
+	display: block;
+	list-style: none outside;
+    flex: 0 0 31%;
+    text-align: left;
+}
+
+.listing a {
+	display: block;
+	background: #fff;
+	border-radius: 0.3em;
+	color: #333;
+	text-decoration: none;
+    padding: 1rem 1.5rem;
+    position: relative;
+    transition: background 0.3s ease-in, color 0.3s ease-in;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+}
+
+.listing a:before {
+    display: block;
+    border-radius: 0.3em;
+    content: '';
+    position: absolute;
+    opacity: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
+    transition: opacity 0.4s ease-in;
+    box-shadow: 0 0 5rem 0.9rem rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+.listing a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.listing a:hover:before {
+    opacity: 1;
+}
+
+.listing a span {
+	display: block;
+}
+
+.listing a .title {
+	font-weight: bold;
+	font-size: 1.2rem;
+	padding-bottom: 4rem;
+}

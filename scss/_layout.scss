@@ -3,14 +3,39 @@ body {
 }
 
 .site {
-    padding: var(--spacing-site, 2em);
+	padding-top: var(--spacing-site, 2em);
+	width: 100%;
 }
 
 .site-content {
+	display: block;
     max-width: 60rem;
     margin: 0 auto;
+	padding: calc(var(--spacing-site) + 4rem) 0;
 }
 
 body p:first-child {
     --color-text-main: #F00;
 }
+
+body.login {
+	height: 100vh;
+	overflow: hidden;
+	padding-top: 0;
+	
+}
+
+body.login .site {
+	flex: 1 0 auto;
+	background: #EEE;
+	// border: 4rem solid #FFF;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+body.login .site-header {
+	display: none;
+}
+

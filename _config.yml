@@ -5,7 +5,7 @@ title: Jekyll Theme - Lazy
 email: pavel.runchev@gmail.com
 description: It is minimal and lazy!
 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/jekyll-theme-lazy" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: PavelRunchev
 github_username:  PavelRunchev
@@ -22,7 +22,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - package.json
+  - package-lock.json
   - gulpfile.js
-  - docs
   - node_modules
+  - docs
   - scss
+  - .vscode
